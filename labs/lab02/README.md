@@ -42,7 +42,7 @@ Add-AzAccount -Subscription '<<your subscription name>>'
 - Deploy the [main.bicep](main.bicep) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\labs\lab02\main.bicep'
+New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\app-lz\lab02\main.bicep'
 ```
 
 ### Method (2) - `main.parameters.json` file
@@ -50,7 +50,7 @@ New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFi
 - Deploy the [main.parameters.json](main.parameters.json) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\labs\lab02\main.bicep' -TemplateParameterFile '<<path to the repo>>\labs\lab02\main.parameters.json'
+New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\app-lz\lab02\main.bicep' -TemplateParameterFile '<<path to the repo>>\app-lz\lab02\main.parameters.json'
 ```
 
 ---

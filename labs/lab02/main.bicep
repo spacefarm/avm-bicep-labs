@@ -19,7 +19,7 @@ param virtualMachinePassword string
 
 // Core Resource Group
 
-module coreResourceGroup 'childModules/core.bicep' = {
+module coreResourceGroup 'app-lz/lab02/childModules/core.bicep' = {
   name: '${uniqueString(deployment().name)}-core'
   params: {
     resourceGroupNameCore: resourceGroupNameCore
@@ -30,7 +30,7 @@ module coreResourceGroup 'childModules/core.bicep' = {
 
 // Workload Resource Group
 
-module workloadResourceGroup 'childModules/workload.bicep' = {
+module workloadResourceGroup 'app-lz/lab02/childModules/workload.bicep' = {
   name: '${uniqueString(deployment().name)}-workload'
   params: {
     resourceGroupNameWorkload: resourceGroupNameWorkload
