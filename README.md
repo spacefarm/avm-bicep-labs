@@ -17,7 +17,7 @@ This repository provides lab-based samples that demonstrates how to use the Azur
 
 | File/folder       | Description                                |
 | ----------------- | ------------------------------------------ |
-| `app-lz`            | The files for the lab.                     |
+| `labs`            | The files for the lab.                     |
 | `.gitignore`      | Define what to ignore at commit time.      |
 | `CHANGELOG.md`    | List of changes to the sample.             |
 | `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
@@ -50,7 +50,7 @@ In this part, we are going to get a local copy of the lab files for use in the r
 
 ##### Architecture
 
-![diagram](app-lz/lab01/diagram.png)
+![diagram](labs/lab01/diagram.png)
 
 #### Description
 
@@ -88,7 +88,7 @@ az account set --subscription '<<your subscription name>>'
 - Deploy the [main.bicep](main.bicep) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-az deployment sub create --location 'australiaeast' --name 'lab01' --template-file '<<path to the repo>>/app-lz/lab01/main.bicep' --verbose
+az deployment sub create --location 'australiaeast' --name 'lab01' --template-file '<<path to the repo>>/labs/lab01/main.bicep' --verbose
 ```
 
 ### Method (2) - `main.parameters.json` file
@@ -96,7 +96,7 @@ az deployment sub create --location 'australiaeast' --name 'lab01' --template-fi
 - Deploy the [main.parameters.json](main.parameters.json) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-az deployment sub create --location 'australiaeast' --name 'lab01' --template-file '<<path to the repo>>/app-lz/lab01/main.bicep' --parameters '<<path to the repo>>/app-lz/lab01/main.parameters.json' --verbose
+az deployment sub create --location 'australiaeast' --name 'lab01' --template-file '<<path to the repo>>/labs/lab01/main.bicep' --parameters '<<path to the repo>>/labs/lab01/main.parameters.json' --verbose
 ```
 
 ---
@@ -107,7 +107,7 @@ Initially created by [ahmadabdalla](https://github.com/ahmadabdalla) and later a
 
 ### Architecture
 
-![diagram](app-lz/lab02/diagram.png)
+![diagram](labs/lab02/diagram.png)
 
 ### Description
 
@@ -145,7 +145,7 @@ Add-AzAccount -Subscription '<<your subscription name>>'
 - Deploy the [main.bicep](main.bicep) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\app-lz\lab02\main.bicep'
+New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\labs\lab02\main.bicep'
 ```
 
 #### Method (2) - `main.parameters.json` file
@@ -153,7 +153,7 @@ New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFi
 - Deploy the [main.parameters.json](main.parameters.json) by modifying the `identifier` parameter to something that is unique to your deployment (i.e. a 5 letter string). Additionally you can also change the `location` parameter to a different Azure region of your choice.
 
 ```powershell
-New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\app-lz\lab02\main.bicep' -TemplateParameterFile '<<path to the repo>>\app-lz\lab02\main.parameters.json'
+New-AzDeployment -Location 'australiaeast' -deploymentname 'avmdemo' -TemplateFile '<<path to the repo>>\labs\lab02\main.bicep' -TemplateParameterFile '<<path to the repo>>\labs\lab02\main.parameters.json'
 ```
 
 ---
